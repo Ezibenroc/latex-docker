@@ -7,4 +7,4 @@ RUN apt update && apt install --no-install-recommends -y \
 RUN apt install --no-install-recommends -y \
     poppler-utils
 RUN apt install --no-install-recommends -y \
-    r-base r-cran-ggplot2 r-cran-dplyr
+    r-base r-cran-ggplot2 r-cran-dplyr r-cran-tidyr r-cran-readr
