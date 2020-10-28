@@ -9,3 +9,4 @@ RUN apt install --no-install-recommends -y \
 RUN apt install --no-install-recommends -y \
     r-base r-cran-ggplot2 r-cran-dplyr r-cran-tidyr r-cran-readr
 RUN Rscript -e 'install.packages("patchwork", repos="https://cloud.r-project.org")'
+RUN apt install --no-install-recommends -y time
