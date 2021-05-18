@@ -17,3 +17,5 @@ RUN mkdir -p /usr/share/fonts/truetype/FiraSans/ /usr/share/fonts/opentype/FiraS
 RUN cp $(find Fira-4.202/ -name '*.ttf' | xargs) /usr/share/fonts/truetype/FiraSans/
 RUN cp $(find Fira-4.202/ -name '*.otf' | xargs) /usr/share/fonts/opentype/FiraSans/
 RUN fc-cache -fv
+# we need this to use some functionnalities of the 'convert' tool, see https://stackoverflow.com/a/59193253/4110059
+RUN sed -i '/disable ghostscript format types/,+6d' /etc/ImageMagick-6/policy.xml
